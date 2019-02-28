@@ -44,15 +44,7 @@ int main(int argc, char const *argv[])
 		cin>>col[i];
 	}
 	cin>>id;
-	for(i=1;i<=v;i++)
-	{
-		if(col[i]==id)
-		{
-			ucol[i] = i;
-		}
-		else
-			ucol[i] = -1;
-	}
+	
 
 
 	int dis[v][v];
@@ -86,8 +78,24 @@ int main(int argc, char const *argv[])
 			cout<<dis[i][j]<<" ";
 		}
 		cout<<endl;
+	}*/
+
+	for(i=1;i<=v;i++)
+	{
+		if(col[i]==id)
+		{
+			ucol[i] = i;
+		}
+		else
+			ucol[i] = -1;
 	}
-*/
+
+
+	/*for(int l=1;l<=v;l++)
+	{
+		cout<<ucol[l]<<" ";
+	}
+	cout<<endl;*/
 	int ans=N;
 	for(i=1;i<=v-1;i++)
 	{
@@ -104,6 +112,7 @@ int main(int argc, char const *argv[])
 		}
 	}
 
+	if(ans == N){return cout<<"-1",0;}
 	cout<<ans;
 
 	return 0;
